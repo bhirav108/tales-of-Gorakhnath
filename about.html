@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Tales of Gorakhnath</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #e94560;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e94560;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #e94560;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #e94560;
+            padding-bottom: 2rem;
+        }
+
+        .about-header h1 {
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        .about-content {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid #e94560;
+            border-radius: 10px;
+            padding: 2rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+            margin-bottom: 2rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+        .about-content h2 {
+            color: #ffd700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .mission-box {
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .mission-box h3 {
+            color: #cfe7ff;
+            margin-bottom: 0.5rem;
+        }
+
+        h3 { color: #cfe7ff; }
+
+        .back-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #e94560, #f72f5f);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: bold;
+            margin-top: 2rem;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(233, 69, 96, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 2rem;
+            border-top: 3px solid #e94560;
+            color: #999;
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Shah's Read</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Content -->
+    <div class="container">
+        <div class="about-header">
+            <h1>About This Project</h1>
+            <p style="color: #e94560; font-style: italic; margin-top: 1rem;">Bringing Ancient Wisdom to the Digital Age</p>
+        </div>
+
+        <div class="about-content">
+            <p>
+                "Tales of Gorakhnath" is a digital initiative dedicated to preserving, celebrating, and sharing the legendary folk tales and spiritual wisdom of Gorakhnath, the great yogi and saint of the Nath tradition. This static webpage serves as a gateway to the rich cultural and spiritual heritage embedded within Hindu folk legends, purans, and mystic teachings that have been passed down through generations.
+            </p>
+
+            <h2>Our Mission</h2>
+                <h3>Preserve Cultural Heritage</h3>
+                <p>Our primary goal is to safeguard and make accessible the timeless stories of Gorakhnath and the Nath tradition. These tales carry profound spiritual wisdom, moral lessons, and insights into human nature that remain relevant even in our modern world. By digitizing these narratives, we ensure they are preserved for future generations.</p>
+
+                <h3>Educate and Inspire</h3>
+                <p>We aim to educate readers about the fascinating world of Hindu folk tales, the spiritual practices of yoga and meditation, and the extraordinary lives of enlightened beings. Through engaging storytelling, we inspire our audience to explore deeper meanings, seek spiritual knowledge, and understand the interconnectedness of all existence.</p>
+
+                <h3>Bridge Ancient and Modern</h3>
+                <p>This project creates a bridge between ancient spiritual wisdom and contemporary audiences. By presenting these timeless tales in an accessible, visually engaging format, we make the profound teachings of Gorakhnath available to anyone with an internet connection, transcending geographical and cultural boundaries.</p>
+
+            <h2>What You'll Find Here</h2>
+            <p>
+                On this platform, you will discover carefully curated stories from the Gorakhnath tradition, including:
+            </p>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;"><strong>Featured Stories:</strong> Epic tales of divine miracles, spiritual journeys, and battles between light and darkness</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Character Profiles:</strong> Detailed descriptions of key figures including Gorakhnath, Matsyendranath, and other mystical beings</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Spiritual Insights:</strong> The deeper meanings and lessons embedded within these ancient narratives</li>
+            </ul>
+
+            <h2>The Power of Stories</h2>
+            <p>
+                Throughout human history, stories have served as the primary vehicle for transmitting knowledge, values, and wisdom. The tales of Gorakhnath are no exception. Through narratives of extraordinary yogis, celestial beings, and spiritual transformations, these stories convey the highest ideals of human achievement—enlightenment, compassion, courage, and the triumph of truth over ignorance. They remind us that within each human being lies the potential for greatness, and that through discipline, meditation, and devotion to truth, one can transcend the limitations of ordinary existence.
+            </p>
+
+            <h2>Our Commitment</h2>
+            <p>
+                We are committed to presenting these stories with authenticity and respect. Each narrative has been carefully crafted to honor the original teachings while making them accessible to modern readers. Our goal is not merely to entertain, but to illuminate—to shed light on the profound truths that lie at the heart of these timeless tales and to invite our readers on a journey of discovery and spiritual awakening.
+            </p>
+
+            <p><a href="https://www.internationalnathorder.org/nath/" target="_blank" rel="noopener noreferrer" style="color:#ffd700; text-decoration:underline;">Learn more about the Nath society.</a></p>
+
+            <p style="color: #ffd700; font-style: italic; margin-top: 2rem;">
+                "In the words of the ancient sages, 'The story is the teacher, and the listener becomes the student of truth.' We invite you to become part of this timeless tradition."
+            </p>
+        </div>
+        <a href="index.html" class="back-button">← Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Shah's compilation. All rights reserved. | Bringing hindu folk tales to life since 2025</p>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>

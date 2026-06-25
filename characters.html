@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters - Tales of Gorakhnath</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #e94560;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e94560;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #e94560;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ffd700;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        .characters-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .character-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: linear-gradient(135deg, #16213e, #0f3460);
+            border: 2px solid #e94560;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .character-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 20px rgba(233, 69, 96, 0.5);
+        }
+
+        .character-image {
+            width: 96px;
+            height: 96px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+            border: 2px solid rgba(255,255,255,0.06);
+        }
+
+        .character-details {
+            flex: 1;
+        }
+
+        /* h3 headings: light shade matching background */
+        h3 { color: #cfe7ff; }
+
+        .character-name {
+            font-size: 1.5rem;
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .character-role {
+            color: #e94560;
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .character-description {
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #e94560, #f72f5f);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: bold;
+            margin-top: 2rem;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(233, 69, 96, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 2rem;
+            border-top: 3px solid #e94560;
+            color: #999;
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .character-name {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .character-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .character-image {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 1rem;
+            }
+
+            .character-details {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Shah's Read</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Characters Section -->
+    <div class="container">
+        <h1>Characters from the Tales</h1>
+        <div class="characters-list">
+            <div class="character-item">
+                <img class="character-image" src="img\gorakh.jpg" alt="Gorakhnath">
+                <div class="character-details">
+                    <div class="character-name">Gorakhnath</div>
+                    <div class="character-role">The Great Yogi and Mystic</div>
+                    <div class="character-description">A legendary saint and mystic known for his profound spiritual wisdom and extraordinary powers. Central to many folk tales, he represents enlightenment and divine knowledge.</div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <img class="character-image" src="img\matsyendranath.jpg" alt="Matsyendranath">
+                <div class="character-details">
+                    <div class="character-name">Matsyendranath</div>
+                    <div class="character-role">The Fish-Headed Sage</div>
+                    <div class="character-description">A legendary yogi believed to be the guru of Gorakhnath. Often depicted in stories as a powerful sage with mystical abilities who teaches profound spiritual truths.</div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <img class="character-image" src="img/demon.png" alt="The Evil Demon">
+                <div class="character-details">
+                    <div class="character-name">The Evil Demon</div>
+                    <div class="character-role">Antagonist</div>
+                    <div class="character-description">A powerful dark force that opposes the heroes and challenges their spiritual strength. Represents the darkness that must be overcome through courage and wisdom.</div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <img class="character-image" src="img/hero.jpg" alt="The Young Hero">
+                <div class="character-details">
+                    <div class="character-name">The Young Hero</div>
+                    <div class="character-role">Seeker of Truth</div>
+                    <div class="character-description">A brave protagonist who embarks on quests to gain knowledge and power. Often guided by the wisdom of the great mystics, facing trials that test both character and determination.</div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <img class="character-image" src="img/guardian.jpg" alt="The Divine Guardian">
+                <div class="character-details">
+                    <div class="character-name">The Divine Guardian</div>
+                    <div class="character-role">Protector of the Realm</div>
+                    <div class="character-description">A celestial being who watches over the people and aids the righteous in their battles. Represents divine justice and protection against evil forces.</div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <img class="character-image" src="img/elder.jpg" alt="The Wise Elder">
+                <div class="character-details">
+                    <div class="character-name">The Wise Elder</div>
+                    <div class="character-role">Keeper of Ancient Knowledge</div>
+                    <div class="character-description">An aged sage who possesses secrets of the ancient world. Often serves as a mentor figure, sharing spiritual wisdom and guiding heroes through their spiritual journeys.</div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <img class="character-image" src="img/shapeshifter.png" alt="The Shape-Shifter">
+                <div class="character-details">
+                    <div class="character-name">The Shape-Shifter</div>
+                    <div class="character-role">Mystical Being of Transformation</div>
+                    <div class="character-description">A magical entity capable of changing forms, representing the fluid nature of reality and the power of transformation. Often appears as a test or guide for the main characters.</div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <img class="character-image" src="img/princess.png" alt="The Celestial Princess">
+                <div class="character-details">
+                    <div class="character-name">The Celestial Princess</div>
+                    <div class="character-role">Divine Maiden</div>
+                    <div class="character-description">A heavenly princess or divine maiden who appears in tales of romance and adventure. Often serves as a prize for the hero or a catalyst for greater adventures.</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">← Back to Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; Shah's compilation. All rights reserved. | Bringing hindu folk tales to life since 2025</p>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>

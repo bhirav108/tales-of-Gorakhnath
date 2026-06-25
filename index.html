@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tales of Gorakhnath</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #e94560;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e94560;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #e94560;
+        }
+
+        /* Main Cover Section */
+        .hero {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-content {
+            flex: 1;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: #e94560;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            animation: slideIn 0.8s ease-out;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #ffd700;
+            animation: slideIn 0.8s ease-out 0.2s both;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
+            animation: slideIn 0.8s ease-out 0.4s both;
+        }
+
+        h3 { color: #cfe7ff; }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            animation: slideIn 0.8s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #e94560, #f72f5f);
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(233, 69, 96, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ffd700;
+            border: 2px solid #ffd700;
+        }
+
+        .btn-secondary:hover {
+            background: #ffd700;
+            color: #1a1a2e;
+        }
+
+        /* Hero Image */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .comic-art {
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #e94560, #ffd700);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comic-art::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.1) 10px,
+                rgba(255, 255, 255, 0.1) 20px
+            );
+            animation: slide 8s linear infinite;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes slide {
+            from {
+                transform: translate(0);
+            }
+            to {
+                transform: translate(20px, 20px);
+            }
+        }
+
+        /* Featured Section */
+        .featured {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .featured h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #ffd700;
+        }
+
+        .comics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .comic-card {
+            background: linear-gradient(135deg, #16213e, #0f3460);
+            border: 2px solid #e94560;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .comic-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(233, 69, 96, 0.5);
+        }
+
+        .comic-card-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #ffd700;
+        }
+
+        .comic-card-desc {
+            color: #e0e0e0;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 2rem;
+            border-top: 3px solid #e94560;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo"> Shah's Read</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="about.html">Abouts</a></li>
+        </ul>
+    </nav>
+
+    <!-- character Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Read the folk tales of Gorakhnath</h1>
+            <img src="img/gorakhnath.jpg" alt="Gorakhnath" style="width:320px; height:auto; border-radius:12px; display:block; margin:1rem auto;">
+            <p class="subtitle">Experience wisdom through stories</p>
+            <p>Dive into incredible stories of mystics, adventure and extraordinary powers. From folk legends to purans, discover ancient tales today!</p>
+        </div>
+    </section>
+
+    <!-- Featured stories -->
+    <section class="featured" id="featured-stories">
+        <h2>Featured stories</h2>
+        <div class="comics-grid">
+            <a href="story1.html" style="text-decoration: none; color: inherit;">
+                <div class="comic-card">
+                    <div class="comic-card-title">The Birth of Gorakhnath</div>
+                    <div class="comic-card-desc">The legendary tale of how Gorakhnath came to be a great mystic and yogi, blessed with divine powers and spiritual wisdom.</div>
+                </div>
+            </a>
+            <a href="story2.html" style="text-decoration: none; color: inherit;">
+                <div class="comic-card">
+                    <div class="comic-card-title">Gorakhnath and the Demon</div>
+                    <div class="comic-card-desc">An epic battle between the great yogi Gorakhnath and a powerful demon threatening the realm, showcasing divine power over darkness.</div>
+                </div>
+            </a>
+            <a href="story3.html" style="text-decoration: none; color: inherit;">
+                <div class="comic-card">
+                    <div class="comic-card-title">The Quest for Immortality</div>
+                    <div class="comic-card-desc">Follow the spiritual journey of seekers as they learn ancient secrets of immortality and enlightenment from the mystical Gorakhnath.</div>
+                </div>
+            </a>
+            <a href="story4.html" style="text-decoration: none; color: inherit;">
+                <div class="comic-card">
+                    <div class="comic-card-title">Divine Miracles and Wonders</div>
+                    <div class="comic-card-desc">A collection of miraculous tales showcasing the extraordinary powers of the great saints and mystics of the Nath tradition.</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Shah's compilation. | Bringing Hindu folk tales to life since 2025</p>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>
